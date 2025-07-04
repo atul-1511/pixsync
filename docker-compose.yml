@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./backend/app:/app/app
+    restart: unless-stopped
+  frontend:
+    build: ./frontend
+    ports:
+      - "9001:80"
+    volumes:
+      - ./frontend:/app
+    restart: unless-stopped
