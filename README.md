@@ -78,8 +78,8 @@ README.md
 ---
 
 ## Running the Application
-- **Backend:** [http://localhost:9000](http://localhost:9000)
-- **Frontend:** [http://localhost:9001](http://localhost:9001)
+- **Backend:** [http://localhost:3030](http://localhost:3030)
+- **Frontend:** [http://localhost:3031](http://localhost:3031)
 
 ---
 
@@ -93,7 +93,7 @@ README.md
   ```
 - **Run backend locally:**
   ```sh
-  poetry run uvicorn src.main:app --host 0.0.0.0 --port 9000
+  poetry run uvicorn src.main:app --host 0.0.0.0 --port 3030
   ```
 - **Add a new Python package:**
   ```sh
@@ -130,7 +130,7 @@ README.md
 
 ## Environment Variables
 - **Frontend:**
-  - `frontend/.env` (e.g., `PORT=9001`)
+  - `frontend/.env` (e.g., `PORT=3031`)
 - **Backend:**
   - Add a `backend/.env` if needed for secrets, API keys, etc.
 

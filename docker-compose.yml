@@ -3,14 +3,15 @@ services:
   backend:
     build: ./backend
     ports:
-      - "9000:9000"
+      - "3030:3030"
     volumes:
       - ./backend/src:/src/src
+      - ./backend/src/photos:/src/photos
     restart: unless-stopped
   frontend:
     build: ./frontend
     ports:
-      - "9001:80"
+      - "3031:80"
     volumes:
       - ./frontend:/app
     restart: unless-stopped

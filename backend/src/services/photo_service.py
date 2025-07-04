@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import List, Dict
 
-# adjust this to wherever you mount your photos in your container
-PHOTO_DIR = Path(__file__).parent.parent.parent / "photos"
+# Always point to src/photos
+PHOTO_DIR = Path(__file__).parent.parent / "photos"
 
 def load_photos(limit: int = 10) -> List[Dict]:
     """
