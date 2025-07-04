@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-WORKDIR /app
+WORKDIR /src
 
 # Install Poetry
 RUN pip install poetry
@@ -9,6 +9,6 @@ COPY pyproject.toml .
 COPY poetry.lock .
 RUN poetry install --no-root --no-interaction --no-ansi
 
-COPY app ./app
+COPY src ./src
 
-CMD ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9000"]
+CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "9000"]

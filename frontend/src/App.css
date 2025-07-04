@@ -1,0 +1,34 @@
+/* centers the “Show Photos” button */
+.button-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* grid for photos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+/* each photo card */
+.photo-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.photo-item .caption {
+    padding: 8px;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Poetry
+poetry.lock
+
+# VSCode
+.vscode/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Build artifacts
+dist/
+build/
+
+# React build
+frontend/build/
+
+# Misc
+*.swp
+*.swo 
