@@ -4,12 +4,16 @@ from insightface.app import FaceAnalysis
 import os
 
 
-os.environ['INSIGHTFACE_HOME'] = '/models'
+os.environ['INSIGHTFACE_HOME'] = '/models/insightface'
 
 class FaceProcessor:
     def __init__(self, model_name='buffalo_l', device='CPUExecutionProvider', det_size=(640, 640)):
         """Initializes the FaceProcessor with an InsightFace model."""
-        self.app = FaceAnalysis(name=model_name, providers=[device])
+        self.app = FaceAnalysis(
+            name=model_name,
+            root='/models/insightface',
+            providers=[device]
+        )
         self.app.prepare(ctx_id=-1, det_size=det_size)
 
     def extract_embeddings(self, img_path):
