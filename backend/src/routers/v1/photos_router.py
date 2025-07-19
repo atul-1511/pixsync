@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from src.services.photo_service import load_photos
+from src.services.photo_service import LoadPhotos
+import pathlib
 
 router = APIRouter()
 
@@ -12,7 +13,11 @@ async def get_photos():
         { "id": 1, "url": "/static/photos/foo.jpg", "title": "foo" },
         …
       ]
-    }
+    }-
     """
-    photos = load_photos(limit=10)
+
+    SELFIE_PATH = pathlib.Path('/Users/59423/Desktop/selfie.jpg') 
+
+    load_photos = LoadPhotos()
+    photos = load_photos.search_and_load(SELFIE_PATH)
     return {"photos": photos}
