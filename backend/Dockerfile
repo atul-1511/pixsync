@@ -8,6 +8,10 @@ RUN apt-get update && apt-get install -y build-essential libgl1 libglib2.0-0 && 
 # Install Poetry
 RUN pip install poetry
 
+# Copy pre-downloaded InsightFace model into container
+COPY ./models/insightface/buffalo_l /models/insightface/models/buffalo_l
+
+
 COPY pyproject.toml .
 COPY poetry.lock .
 RUN poetry install --no-root --no-interaction --no-ansi
