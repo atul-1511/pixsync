@@ -33,4 +33,9 @@ frontend/build/
 
 # Misc
 *.swp
-*.swo 
+*.swo
+*.JPG
+*.jpg
+*.PNG
+*.png
+*.onnx 

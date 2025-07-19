@@ -16,7 +16,7 @@ async def get_photos():
     }-
     """
 
-    SELFIE_PATH = pathlib.Path('/Users/59423/Desktop/selfie.jpg') 
+    SELFIE_PATH = pathlib.Path('src/selfie.jpg') 
 
     load_photos = LoadPhotos()
     photos = load_photos.search_and_load(SELFIE_PATH)

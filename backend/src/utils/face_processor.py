@@ -1,6 +1,10 @@
 import cv2
 import numpy as np
 from insightface.app import FaceAnalysis
+import os
+
+
+os.environ['INSIGHTFACE_HOME'] = '/models'
 
 class FaceProcessor:
     def __init__(self, model_name='buffalo_l', device='CPUExecutionProvider', det_size=(640, 640)):
