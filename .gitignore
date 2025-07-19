@@ -39,3 +39,4 @@ frontend/build/
 *.PNG
 *.png
 *.onnx 
+*.zip
