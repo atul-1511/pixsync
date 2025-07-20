@@ -8,7 +8,7 @@ class LoadPhotos:
     # just for url/title generation
     PHOTO_DIR = pathlib.Path('/Users/59423/Downloads/JPEG 02/')
 
-    def __init__(self, index_path = 'src/database/faces.index', meta_db = 'src/database/faces.sqlite', top_k = 64, threshold = 0.33):
+    def __init__(self, index_path = 'src/database/faces.index', meta_db = 'src/database/faces.sqlite', top_k = 64, threshold = 0.5):
         # wrap your untouched FaceSearch
         self.face_search = FaceSearch(
             index_path=index_path,
