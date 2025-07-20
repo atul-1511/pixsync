@@ -68,6 +68,7 @@ function App() {
             {error && <div style={{ color: 'red' }}>{error}</div>}
             {showImages && (
                 <>
+<<<<<<< Updated upstream
                     <h2>Photos ({photos.length} images) - Grid: {gridColumns} columns</h2>
                     <div style={{ marginBottom: '20px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
                         <strong>Debug Info:</strong><br />
@@ -76,6 +77,15 @@ function App() {
                         CSS class: {gridClassName}
                     </div>
                     <div className={gridClassName}>
+=======
+<<<<<<< Updated upstream
+                    <h2>Photos</h2>
+                    <ul>
+=======
+                    <h2>({photos.length} photos found)</h2>
+                    <div className={gridClassName}>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                         {photos.map(photo => (
                             <div key={photo.id} className="photo-card">
                                 <img
